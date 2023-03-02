@@ -4,7 +4,10 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<script></script>
+		<!-- <script src="colour-audit.js"></script> -->
+		<script>
+			console.log("Working?");
+		</script>
 		<style>
 			body {
 				width: 100%;
@@ -59,7 +62,16 @@
 		<main>
 			<div class="side build">
 				side
-				<button onclick="openFile">Choose file</button>
+				<form>
+					<!-- could also make a drag and drop surface -->
+					<input
+						type="file"
+						id="file-selector"
+						accept=".jpg, .jpeg, .png" />
+					<button id="submitButton" onclick="getFile()">
+						Submit
+					</button>
+				</form>
 			</div>
 			<div class="content build">
 				content
