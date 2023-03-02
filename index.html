@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script></script>
+		<style>
+			body {
+				width: 100%;
+				margin: 0px;
+			}
+			.build {
+				border: 1px solid black;
+				padding: 10px;
+			}
+			footer {
+			}
+			main {
+				display: flex;
+				flex-flow: row nowrap;
+
+				min-height: 300px;
+			}
+			.side {
+				width: 30%;
+			}
+			.content {
+				width: 70%;
+			}
+			@media (max-width: 400px) {
+				main {
+					flex-direction: column;
+				}
+				.side {
+					width: 100%;
+				}
+				.content {
+					width: 100%;
+				}
+			}
+		</style>
+		<title>Colour audit</title>
+	</head>
+	<body>
+		<header class="build">
+			<h1 class="build">Colour audit</h1>
+			<p>
+				Audit your css colours: How many have you used? How consistent
+				are they? Where are they?
+			</p>
+		</header>
+		<main>
+			<div class="side build">
+				side
+				<button onclick="openFile">Choose file</button>
+			</div>
+			<div class="content build">
+				content
+				<table>
+					<thead>
+						<th>Colour</th>
+						<th>Peek</th>
+						<th>Location</th>
+					</thead>
+					<tbody></tbody>
+				</table>
+			</div>
+		</main>
+		<footer class="build">footer</footer>
+	</body>
+</html>
